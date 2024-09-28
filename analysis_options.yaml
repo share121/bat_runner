@@ -1,0 +1,19 @@
+# This file configures the analyzer to use the lint rule set from `package:lint`
+
+include: package:lint/strict.yaml # For production apps
+# include: package:lint/casual.yaml # For code samples, hackathons and other non-production code
+# include: package:lint/package.yaml # Use this for packages with public API
+
+# You might want to exclude auto-generated files from dart analysis
+analyzer:
+  exclude:
+    #- '**.freezed.dart'
+    #- '**.g.dart'
+
+# You can customize the lint rules set to your own liking. A list of all rules
+# can be found at https://dart-lang.github.io/linter/lints/options/options.html
+linter:
+  rules:
+    prefer_single_quotes: true
+    always_use_package_imports: false
+    prefer_relative_imports: true

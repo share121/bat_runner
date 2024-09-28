@@ -1,0 +1,28 @@
+name: 安装 vscode
+description: 此脚本会帮助你自动安装 vscode 并配置好插件
+author: share121
+authorUrl: https://github.com/share121
+sourceUrl: https://github.com/share121/vscode
+version: 1.0.0
+license: MIT
+step:
+  - name: 输入安装位置
+    type: input-text
+    default: /usr/local/bin/vscode
+    placeholder: 请输入安装位置
+    id: INPUT
+    run: mkdir -p $INPUT
+  - name: 安装 vscode
+    run: |
+      curl -fsSL https://code.visualstudio.com/sha/download.sh | sh
+      sudo mv /usr/local/bin/code /usr/local/bin/vscode
+  - name: 配置 vscode 插件
+    run: |
+      sudo vscode --install-extension ms-python.python
+      sudo vscode --install-extension ms-vscode.cpptools
+      sudo vscode --install-extension ms-vscode.cmake-tools
+      sudo vscode --install-extension ms-vscode.cpptools
+      sudo vscode --install-extension ms-vscode.cpptools
+      sudo vscode --install-extension ms-vscode.cpptools
+      sudo vscode --install-extension ms-vscode.cpptools
+      sudo vscode --install-extension ms-vscode.cpptools

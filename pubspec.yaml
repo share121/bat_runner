@@ -1,0 +1,47 @@
+name: bat_runner
+description: 让你的 bat 脚本更好看
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  fluent_ui: ^4.9.1
+  flutter:
+    sdk: flutter
+  flutter_acrylic: ^1.1.4
+  get: ^4.6.6
+  get_storage: ^2.1.1
+  go_router: ^14.2.8
+  intl: ^0.19.0
+  logger: ^2.4.0
+  system_theme: ^3.1.1
+  url_launcher: ^6.3.0
+  window_manager: ^0.4.2
+  yaml: ^3.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  lint: ^2.0.0
+
+flutter_launcher_icons:
+  image_path: icon.webp
+  windows:
+    generate: true
+    icon_size: 256
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+
+msix_config:
+  display_name: Bat Runner
+  publisher_display_name: share121
+  identity_name: com.share121.bat-runner
+  msix_version: 1.0.0.0
+  logo_path: icon.webp
+  capabilities: internetClient
+  languages: zh-CN, zh-TC, en-US
